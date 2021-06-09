@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .top{
+            height:60px;
+            background:black;
+            display:flex;
+            justify-content:center;
+        }
+        .top div{
+            display:flex;
+            line-height:60px;
+            text-align:center;
+        }
+        .img{
+            margin-right:45px;
+        }
+        .one{
+            font-size:16px;
+            color:white;
+        }
+        .one div:hover{
+            color:orange;
+        }
+        .one div{
+            margin-right:45px;
+            justify-content:center;
+        }
+        .bg{
+            width:16px;
+            height:16px;
+            margin-top:23px;
+            background:transparent url(./images/icon.png) no-repeat scroll -230px -26px;
+        }
+        .tw{
+            margin-right:25px;
+            font-size:13px;
+            color:rgb(209,209,209);
+        }
+        .th{
+            margin-right:25px;
+            font-size:13px;
+            color:white;
+        }
+        .three{
+            width:180px;
+            height:24px;
+            margin-top:18px;
+            background:url(./images/search.png) no-repeat;
+            margin-right:25px;
+            font-size:13px;
+            color:rgb(117,117,117);
+            display:flex;
+            justify-content:flex-start;
+            align-items:center;
+        }
+        .three div{
+            margin-left:3px;
+        }
+
+
+        /*middle部分*/
+        .middle{
+            display:flex;
+            justify-content:center;
+        }
+        .left{
+            display:flex;
+            text-align:center;
+            flex-direction:column;
+            margin-right:80px;
+            margin-top:50px;
+        }
+        .title{
+            font-size:20px;
+        }
+        .ar{
+            font-size:13px;
+            margin-top:8px;
+        }
+        .ar span{
+            color:orange;
+        }
+        .br{
+            font-size:11px;
+            margin-bottom:5px;
+        }
+        .right{
+            display:flex;
+            justify-content:center;
+            flex-direction:column;
+            margin-top:50px;
+
+        }
+
+        .record{
+            width:300px;
+            height:300px;
+            border:1px solid rgb(209,209,209);
+            border-radius:50%;
+            overflow:hidden;
+            margin-left:50px;
+            position:relative;
+        }
+        .splice2{
+            position:absolute;
+            margin-left:-300px;
+        }
+        @keyframes animation2{
+            0%{
+                transform:rotate(0deg);
+            }
+            100%{
+                transform:rotate(360deg);
+            }
+        }
+        .record img{
+            width:300px;
+            height:300px;
+            animation:animation2 5s linear infinite normal;
+        }
+        .button{
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            align-items:center;
+        }
+        #stops{
+            width:56px;
+            height:40px;
+            background:transparent url(./images/button.jpg) no-repeat scroll -110px 0px;
+        }
+
+
+        /*进度条和黄色圆圈*/
+        #bar{
+            float: left;
+            position: relative;
+            width: 100%;
+            height: 4px;
+            display: flex;
+        }
+        #jindutiao{
+            width:320px;
+            height: 5px;
+            background:rgb(209,209,209);
+        }
+        #jindu{
+            width:0px;
+            height:5px;
+            background:orange;
+
+        }
+        #btn{
+            width:10px;
+            height:10px;
+            background:url(./images/button.jpg) -23px 0px;
+            position:absolute;
+            top: -3px;
+            float:left;
+        }
+        
+        #time{
+            color:rgb(209,209,209);
+            font-size:13px;
+            
+        }
+        #volumn{
+            width:28px;
+            height:17px;
+            background:transparent url(./images/button.jpg) no-repeat scroll -43px 0px;
+        }
+        #onload{
+            width:200px;
+            height:41px;
+            background:transparent url(./images/button.jpg) no-repeat scroll 0px -47px;
+            margin-top:50px;
+            margin-left:101px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            
+        }
+        #on{
+            background:transparent url(./images/button.jpg) no-repeat scroll 0px 0px;
+            width:18px;
+            height:16px;
+        }
+        .end{
+            display:flex;
+            flex-direction:row;
+            margin-top:30px;
+            margin-left:20px;
+        }
+        .touxiang img{
+            width:54px;
+            height:54px;
+        }
+        .touxiang{
+            width:54px;
+            height:54px;
+            border:1px solid white;
+            border-radius:50%;
+            overflow:hidden;
+        }
+        .qipao{
+            width:250px;
+            height:54px;
+            background:url(./images/qipao.jpg) no-repeat;
+
+        }
+        .qipao img{
+            width:15px;
+            height:15px;
+            margin-top:-10px;
+            margin-left:25px;
+        }
+        .qipao p:nth-child(1){
+            color:rgb(134, 128, 128);
+            font-size:10px;
+            margin-top:5px;
+            margin-left:25px;           
+        }
+        .second{
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+
+        }
+        .p2{
+            color:black;
+            font-size:10px;
+        }
+        .p3{
+            color:purple;
+            font-size:13px;
+        }
+
+
+        /*bottom*/
+        .bottom{
+            width:650px;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;      
+            margin:0 auto;   
+            margin-top:20px; 
+        }
+        .one1 span{
+            font-size:11px;
+        }
+        .two1{
+            display:flex;
+            flex-direction:row;
+            margin-right:15px;
+        }
+        .two1 textarea{
+            border:1px solid rgb(209,209,209);
+        }
+        .pic{
+            border:1px solid rgb(209,209,209);
+            width:54px;
+            height:54px;
+            margin-right:15px;
+        }
+        .pic img{
+            width:54px;
+            height:54px;
+
+        }
+        .three1{
+            display:flex;
+            justify-content:space-between;
+            flex-direction:row;
+            margin-top:5px;
+            align-items:center;
+        }
+        .biaoqing{
+            margin-left:69px;
+        }
+        .biaoqing img{
+            width:17px;
+            height:17px;
+            
+        }
+        .rightping{
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            margin-right:15px;
+          
+        }
+        #pinglun{
+            border:1px solid white;
+            width:60px;
+            height:25px;
+            background:rgb(240,188,17);
+            color:white;
+            font-size:13px;
+            text-align:center;
+        }
+        #shuru{
+            font-size:12px;
+        }
+
+
+        #five1{
+            display:flex;
+            flex-direction:column;
+        }
+        .pi{
+            display:flex;
+            flex-direction:row;
+        }
+        .pi_left{
+            margin-right:15px;
+        }
+        .pi_left img{
+            width:54px;
+            height:54px;
+        }
+        .pi_right{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            margin-bottom:15px;
+        }
+        .pi_right1{
+            width:580px;
+            display:flex;
+            justify-content:space-between;
+            flex-direction:row;
+            align-items:center;
+            margin-bottom:4px;
+            color:rgb(102,102,102);
+        }
+        .pi_right2{
+            width:580px;
+            display:flex;
+            justify-content:flex-start;
+            flex-direction:row;
+            align-items:center;
+            font-size:13px;
+            margin-bottom:4px;
+        }
+        .pi_right3{
+            width:580px;
+            display:flex;
+            justify-content:space-between;
+            flex-direction:row;
+            align-items:center;
+            margin-bottom:4px;
+            color:rgb(102,102,102);
+        }
+        .yonghu{
+            color:orange;
+            font-size:13px;
+        }
+        .share{
+            font-size:12px;
+        }
+        .datetime{
+            font-size:10px;
+            color:rgb(209,209,209);
+        }
+        .del{
+            font-size:12px;
+        }
+        .del img{
+            width:12px;
+            height:12px;
+        }
+
+
+        /*分页效果*/
+        .fenye{
+            width:250px;
+            display:flex;
+            flex-direction:row;
+            justify-content:space-between;
+            margin:0 auto;
+
+        }
+
+        .circle{ 
+            width:30px;
+            height:30px;
+            border:1px solid rgb(179, 177, 177);
+            font-size:12px;
+            text-align:center;
+            line-height:30px;
+            border-radius:50%;
+            background:rgb(241, 240, 240);
+        }
+        .circle:hover{
+            background:rgb(237, 188, 18);
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="top">
+            <audio id="mymusic">
+                <source src="./music.mp3" type="audio/mp3">
+            </audio>
+            <div class="img"><img src="./images/logo.jpg" /></div>
+            <div class="one">
+                <div>首页</div>
+                <div>榜单</div>
+                <div>歌手</div>
+                <div>下载酷我客户端</div>
+            </div>
+            <div class="two">
+                <div class="bg"></div>
+                <div class="tw">美女秀</div>
+                <div class="bg"></div>
+                <div class="tw">酷我耳机</div>
+                <div class="bg"></div>
+                <div class="tw">VIP会员 </div>
+                <div class="bg"></div>
+                <div class="tw">i听</div>
+                <div class="th">更多服务</div>
+                <div class="th">登录</div>
+                <div class="th">^</div>
+            </div>
+            <div class="three"><div>找到好音乐</div></div>
+        </div>
+        <div class="middle">
+            <div class="left">
+                <div class="title">喜羊羊</div>
+                <br/>
+                <hr size=1 style="COLOR:#ff9999;border-style:double;width:520px;color:#CCC">
+                <div class="ar">
+                    专辑：<span>儿歌大全</span>&nbsp歌手：<span>华语群星</span>&nbsp分享&nbsp&nbsp<img src="./images/pinglun.jpg">&nbsp&nbsp<span>评论</span>
+                </div>
+                <div class="br">上传时间：2015-10-02歌曲来源：网络</div>
+                <hr/>
+                <div class="ar">在所有天气&nbsp拥有叫人&nbsp大笑的力量</div>
+                <div class="ar">虽然我只是羊</div>
+                <div class="ar">虽然我只是羊</div>
+                <div class="ar">喜羊羊&nbsp美羊羊&nbsp懒羊羊&nbsp沸羊羊</div>
+                <div class="ar">慢羊羊&nbsp软绵绵&nbsp红太狼&nbsp灰太狼</div>
+            </div>
+            <div class="right">
+                <div class="record">
+                    <img src="./images/yang.jpg">
+                    <img class="splice2" src="./images/splice2.png">
+                </div>
+                <div class="button">
+                    <div id="stops"></div>
+                    <!--进度条-->
+                    <div id="bar">
+                        <div id="jindutiao">
+                            <div id="jindu"></div>
+                            <a href="##" id="btn"></a>
+                        </div>
+                    </div>
+    
+                    <div id="time">00.00</div>&nbsp
+                    <div id="volumn"></div>
+                </div>
+                <div id="onload">
+                    <div id="on"></div>&nbsp
+                    免费下载这首歌
+                </div>
+                <div class="end">
+                    <div class="touxiang"><img src="./images/touxiang.jpg"></div>
+                    <div class="qipao">
+                        <p>张曼——H5班</p>
+                        <div class="second">
+                            <div><img src="./images/gif.gif"></div>
+                            <div class="p2">喜羊羊与灰太狼</div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <div class="p3">去现场></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+
+        <div class="bottom">
+            <div class="one1">评论&nbsp&nbsp<span id="pingluncount">1703条评论</span></div>
+            <hr size=1 style="COLOR:#ff9999;border-style:double;width:650px;color:#CCC">
+            <div class="two1">
+                <div class="pic"><img src="./images/touxiang.jpg"></div>
+                <!--输入框-->
+                <textarea id="textarea" style="width:600px;height:200px;" placeholder="分享你的音乐见解"></textarea>
+            </div>
+            <div class="three1">
+                <div class="biaoqing"><img src="./images/biaoqing.png"></div>
+                <div class="rightping">
+                    <div id="shuru">已输入0个字</div>
+                    <div><button id="pinglun">评论</button></div>
+                </div>
+
+            </div>
+            <div class="four1">精彩评论</div>
+            <hr size=1 style="COLOR:#ff9999;border-style:double;width:650px;color:#CCC">
+
+            <div id="five1">
+                <div class="pi">
+                    <div class="pi_left"><img src="./images/touxiang.jpg" style="width:54px;height:54px;"></div>
+                    <div class="pi_right">
+                        <div class="pi_right1">
+                            <div class="yonghu">张曼</div>
+                            <div class="share">分享</div>
+                        </div>
+                        <div class="pi_right2">喜欢这首歌曲！</div>
+                        <div class="pi_right3">
+                            <div class="datetime">2021-06-08 16:16:53</div>
+                            <div class="del">删除&nbsp163&nbsp<img src="./images/dianzan.jpg">&nbsp回复</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div> 
+        <div class="fenye">
+            <div class="circle"><</div>
+            <div class="circle">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div>...</div>
+            <div class="circle">17</div>
+            <div class="circle">></div>
+        </div>
+    </div>
+
+</body>
+<script>
+        var mymusic = document.getElementById("mymusic");
+        var stops = document.getElementById("stops");
+        var btn = document.getElementById("btn");
+        var jindu = document.getElementById("jindu");
+        var time = document.getElementById("time");
+        var volumn = document.getElementById("volumn");
+        var pinglun = document.getElementById("pinglun");
+        var textarea = document.getElementById("textarea");
+        var five1 = document.getElementById("five1");
+
+        var mx = 0;
+        var num = 0;
+        //音乐开始播放
+        stops.onclick = function(){
+            num++;
+            //音乐播放
+            if(num%2 != 0){
+                mymusic.play();
+                //获取当前音频时长
+                var audioLength = mymusic.duration;
+
+                //音乐时间显示
+                nowtime = setInterval(function curtime(){
+                    if(mymusic.currentTime < 10){
+                        time.innerHTML = "00:0"+parseInt(mymusic.currentTime);
+                    }
+                    else if(mymusic.currentTime < 60){
+                        time.innerHTML = "00:"+parseInt(mymusic.currentTime);
+                    }
+                    else{
+                        var min = parseInt(mymusic.currentTime/60);
+                        var sec = parseInt(mymusic.currentTime%60);
+                        if(sec < 10){
+                            time.innerHTML = "0"+min+":0"+sec;
+                        }
+                        else{
+                            time.innerHTML = "0"+min+":"+sec;
+                        }
+                    }
+
+                },1000)
+                //黄色圆圈走动
+                var add = 320/168;
+                timied = setInterval(function move(){
+                    mx += add;
+                    if(mx<=320){
+                        document.getElementById("btn").style.left = mx + "px";
+
+                        //黄色背景图走动
+                        document.getElementById("jindu").style.width = mx+ "px";
+                    }else{
+                        document.getElementById("btn").style.left = 320 + "px";
+
+                        //黄色背景图走动
+                        document.getElementById("jindu").style.width = 320 + "px";
+                    }
+                },1000)
+
+                //图片切换
+                stops.style.backgroundPositionX = -207+"px";
+                stops.style.backgroundPositionY = 0+"px";
+            }else{
+                //图片切换
+                stops.style.backgroundPositionY = 0+"px";
+                stops.style.backgroundPositionX = -110+"px";
+
+                //黄色圆圈停止
+                clearInterval(timied);
+                //音乐时间显示停止
+                clearInterval(nowtime);
+                //音乐暂停
+                mymusic.pause();
+            }
+
+        }
+
+        //是否静音
+        volumn.onclick = function(){
+            if(mymusic.muted == true){
+                mymusic.muted = false;
+                volumn.style.backgroundPositionY = 0+"px";
+                volumn.style.backgroundPositionX = -69+"px";
+            }
+            else{
+                mymusic.muted = true;
+                volumn.style.backgroundPositionY = 0+"px";
+                volumn.style.backgroundPositionX = -43+"px";
+            }
+        }
+
+
+        //输入字数变化
+        textarea.oninput = function(){
+            shuru.innerHTML = "已输入"+textarea.value.length+"个字";
+        }
+
+        //在输入框中评论，本地存储
+        var con = 0;
+        var c = 1703;
+        var database = [];
+        pinglun.onclick = function(){
+            //评论条数
+            c++;
+            pingluncount.innerHTML = c+"条评论";
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth()+1;
+            var day = date.getDate();
+
+            var h = date.getHours()>=10?date.getHours():'0'+date.getHours();
+            var m = date.getMinutes()>=10?date.getMinutes():'0'+date.getMinutes();
+            var s = date.getSeconds()>=10?date.getSeconds():'0'+date.getSeconds();
+            if(month<10 || day<10){
+                var time = year+"-0"+month+"-0"+day;
+            }
+            else if(month<10 || day>=10){
+                var time = year+"-0"+month+"-"+day;
+            }
+            else if(month>=10 || day<10){
+                var time = year+"-"+month+"-0"+day;
+            }
+            else if(month>=10 || day>=10){
+                var time = year+"-"+month+"-"+day;
+            }
+            var str = h+":"+m+":"+s;
+
+            if(textarea.value == ""){
+                alert("评论区不能为空！");
+            }else{
+                if(!window.localStorage){
+                    alert("浏览器不支持localstorage");
+                }else{
+                    var pinglun1 = textarea.value;
+                    var data = {
+                        pinglun:pinglun1,
+                        time:time+" "+str,
+                    }
+                    database.push(data);
+                    localStorage['database'] = JSON.stringify(database);
+
+
+
+                    //输出精彩评论
+                    var pi =  document.createElement("div");
+                    var pi_left = document.createElement("div");
+                    var pi_right = document.createElement("div");
+                    var pi_right1 = document.createElement("div");
+                    var yonghu = document.createElement("div");
+                    var share = document.createElement("div");
+                    var pi_right2 = document.createElement("div");
+                    var pi_right3 = document.createElement("div");
+                    var datetime = document.createElement("div");
+                    var del = document.createElement("div");
+
+
+
+                    five1.appendChild(pi);
+                    pi.appendChild(pi_left);
+                    pi.appendChild(pi_right);
+
+                    pi_right.appendChild(pi_right1);
+                    pi_right.appendChild(pi_right2);
+                    pi_right.appendChild(pi_right3);
+
+                    pi_right1.appendChild(yonghu);
+                    pi_right1.appendChild(share);
+                    pi_right3.appendChild(datetime);
+                    pi_right3.appendChild(del);
+
+                    con++;
+                    pi_left.innerHTML = "<img src="+"./images/avatar.jpg"+" style="+"width:54px;height:54px;"+">";
+                    yonghu.innerHTML = con;
+                    share.innerHTML = "分享";
+
+                     pi_right2.innerHTML = pinglun1;
+
+                    //获取当前日期和时间
+                    datetime.innerHTML = time+"&nbsp"+str;
+
+                    var zan=parseInt(Math.random()*1000);
+                    del.innerHTML = "删除&nbsp"+zan+"&nbsp<img src="+"./images/dianzan.jpg"+">&nbsp回复";
+
+
+
+                    //为节点添加样式
+                    pi.className = "pi";
+                    pi_left.className = "pi_left";
+                    pi_right.className = "pi_right";
+                    pi_right1.className = "pi_right1";
+                    pi_right2.className = "pi_right2";
+                    pi_right3.className = "pi_right3";
+                    yonghu.className = "yonghu";
+                    share.className = "share";
+                    datetime.className = "datetime";
+                    del.className = "del";
+
+                }
+
+            }
+
+        }
+</script>
+</html>
